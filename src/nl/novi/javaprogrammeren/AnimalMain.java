@@ -1,5 +1,8 @@
 package nl.novi.javaprogrammeren;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class AnimalMain {
     /*
     Het is traditie om overerving uit te leggen met behulp van dieren. Hier ontkomen jullie dus ook niet aan.
@@ -33,5 +36,25 @@ public class AnimalMain {
     Alles staat hier in het Nederlands beschreven. Schrijf je klassen-, variabele en methodenamen in het Engels.
 
      */
+
+
+    public static void main(String[] args) {
+
+        Lion bert = new Lion("Bert", "Roarrr", "raw meat", 'M', "lioncage",
+                "Wednesday", "Africa", 3);
+        Tiger piet = new Tiger("Piet", "Grrr", "fresh swine", 'F', "tigercage",
+                "monday", "India", 20);
+
+        List<Animal> animals = new ArrayList<>();
+        animals.add(bert);
+        animals.add(piet);
+
+        for (Animal a : animals) {
+            a.sleep();
+            a.makeNoise();
+            a.printAllActions();
+
+        }
+    }
 
 }
