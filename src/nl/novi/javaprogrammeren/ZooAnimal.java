@@ -1,4 +1,15 @@
-package nl.novi.javaprogrammeren.overerving;
+package nl.novi.javaprogrammeren;
 
-public class ZooAnimal {
+public abstract class ZooAnimal extends Animal{
+    String cageName;
+    String dayLastFeed;
+    String countryOrigin;
+
+    public ZooAnimal(String name, String noise, String food, char sex,
+                          String cageName, String dayLastFeed, String countryOrigin) {
+        super(name, noise, food, sex);
+        this.cageName = cageName;
+        this.dayLastFeed = dayLastFeed;
+        this.countryOrigin = countryOrigin;
+    }
 }
